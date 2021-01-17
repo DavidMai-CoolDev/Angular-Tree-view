@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "test-tree"
+  "defaultProject": "test-tree",
+  "cli": {
+    "analytics": "f8517b4a-3eae-4f21-a466-039d6833fc11"
+  }
 }

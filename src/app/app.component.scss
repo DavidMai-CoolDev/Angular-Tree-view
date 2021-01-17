@@ -1,0 +1,60 @@
+// .open {
+//     background-color: yellow;
+//     img {
+//         transform: rotate(90deg);
+//         display: none;
+//     }
+// }
+
+// li{
+
+//     &.open > .arrow-icon{
+//         display: none;
+//         color: salmon !important;
+//     }
+// }
+
+
+// ul > li > span {
+//     visibility: hidden;
+//     background-color: rebeccapurple;
+// }
+
+// ul {
+//     display: block;
+// }
+// ul li {
+//     display: block;
+
+//     :before {
+//         content: "[-]";
+//     }
+// }
+
+// ul li span {
+//     display: inline-block;
+//     background-color: rebeccapurple;
+    
+// }
+
+// ul > li > span:first-of-type{
+//     float: left;
+//     width: 220px;
+// }
+
+// .one-row {
+//     width: fit-content;
+//     background: red;
+
+//     &:hover {
+//         cursor: pointer;
+//     }
+// }
+
+// .open > .arrow-icon {
+//     transform: rotate(90deg);
+// }
+
+// .open > ul > li {
+//     visibility: hidden;
+// }
