@@ -16,29 +16,35 @@ export class AppComponent implements OnInit {
   datas: any ={};
   dataTest: any =[];
   lessons: boolean = false;
+  allFile: number = 0;
+  smallFile: number = 0;
+  count: number = 0;
 
   constructor(){}
   ngOnInit(): void {
     this.treeData = [
       {
-        name: 'testter',
+        name: 'testter'
       },
       {
-        name: 'test1',
+        name: 'other',
         children: [
           {
             name:'test1-1',
         },
         {
-          name: 'test1-2',
+          name: 'test1-2'
         },
         {
-          name: 'ak47',
+          name: 'ak47'
+        },
+        {
+          name: 'ak48'
         }
       ]
       },
       {
-        name: 'test2',
+        name: 'another',
         children: [
           {
             name: 'test2-1',
@@ -47,30 +53,41 @@ export class AppComponent implements OnInit {
                 name: 'test2-1-1',
                 children: [
                   {
-                    name: 'test2-1-1-1',
+                    name: 'test2-1-1-1'
                   },{
-                    name: 'ak47',
+                    name: 'ak47'
+                  },
+                  {
+                    name: 'ak48'
                   }
                 ]
               },
               {
-                name: 'test2-1-2',
+                name: 'test2-1-2'
               }
             ]
           },
           {
-            name: 'test2-2',
+            name: 'test2-2'
           },
           {
-            name: 'okmen',
+            name: 'okmen'
           }
         ]
       },
       {
-        name: 'okmen2',
+        name: 'okmen2'
       },
       {
         name: 'ak47',
+        children: [
+          {
+            name: 'ak50'
+          },
+          {
+            name: 'ak51'
+          }
+        ]
       }
       
     ];
@@ -136,16 +153,30 @@ export class AppComponent implements OnInit {
     //   },
     //   {
     //     name: 'ak47',
-    //     children: []
+    //     children: [
+    //       {
+    //         name: 'ak50',
+    //         children: []
+    //       },
+    //       {
+    //         name: 'ak51',
+    //         children: []
+    //       },
+    //       {
+    //         name: 'ak52',
+    //         children: []
+    //       }
+    //     ]
     //   }
       
     // ];
 
     this.myData = this.treeData;
     for(let i = 0; i<this.myData.length; i++){
+      // this.smallFile =0;
       this.updateTree(this.myData[i]);
     }
-    
+    console.log(this.myData);
     this.isShowTree = true;
 
     // this.datas = { tree: [{ name: 'name1', tree: [{ name: 'name2' }, { name: 'name3' }, { name: 'name4', tree: [{ name: 'name5' }, { name: 'name6' }] }, { name: 'name7' }] }, { name: 'name8', tree: [{ name: 'name9' }] }] };
@@ -167,12 +198,19 @@ export class AppComponent implements OnInit {
 
 updateTree(data: any) {
   data.expand = true;
+  this.count ++;
   if(data.children && data.children.length > 0){
+    this.smallFile =0;
   for(let j = 0, len = data.children.length; j < len; j++) {
+    this.smallFile +=1;
+    data.numberFile = this.smallFile;
     this.updateTree(data.children[j]);
   }
+  this.allFile+= data.children.length;
+  // this.smallFile++;
 }else{
-  // delete data.expand;
+  // this.allFile+=1;
+  data.numberFile = 1;
    data.expand = false;
 } 
 }
@@ -219,4 +257,6 @@ toggleChildren(node: any) {
     alert('get API for: ' + node.name);
   }
 }
+
+ 
 }

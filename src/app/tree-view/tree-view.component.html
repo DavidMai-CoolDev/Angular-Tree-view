@@ -1,9 +1,11 @@
+
 <ul>
     <li *ngFor="let node of treeData">
         <div class="one-row" (click)="toggleChildren(node)" appDemo>
             <!-- *ngIf="node.children && node.children.length > 0" -->
             <img [src]="node.expand ? 'assets/img/anh1.png' : 'assets/img/anh2.png'" style="width: 16px; height: 16px;">
             <span>{{node.name}}</span>
+            <span *ngIf="node.numberFile > 1"><b>({{node.numberFile}})</b></span>
             <img *ngIf="node.children" class="arrow-icon" src='assets/img/anh2.png' style="width: 16px; height: 16px;">
             <!-- <span *ngIf="node.children">[+]</span> -->
         </div>

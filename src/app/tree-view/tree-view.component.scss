@@ -14,11 +14,11 @@ ul li {
     // }
 }
 
-ul li span {
-    display: inline-block;
-    background-color: rebeccapurple;
+// ul li span {
+//     display: inline-block;
+//     background-color: rebeccapurple;
     
-}
+// }
 
 // ul > li > span:first-of-type{
 //     float: left;
@@ -27,7 +27,7 @@ ul li span {
 
 .one-row {
     width: fit-content;
-    background: red;
+    background: blanchedalmond;
 
     &:hover {
         cursor: pointer;

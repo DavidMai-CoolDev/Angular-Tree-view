@@ -10,6 +10,8 @@
   </ng-template>
   <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: list }"></ng-container>
 </ul> -->
+
 <input type="text" #inputstring [(ngModel)]="folderName" [ngModelOptions]="{standalone: true}" (keyup)="filterdata()" placeholder="enter character">
-<app-tree-view [treeData] ="myData" *ngIf="isShowTree"></app-tree-view>
+<div> the all file : {{allFile}}</div>
+<app-tree-view [treeData] ="myData" [allFile] ="allFile" *ngIf="isShowTree"></app-tree-view>
 <button type="button" class="btn-primary" appDemo> Click Me !!</button>

@@ -8,11 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TreeViewComponent implements OnInit {
   @Input() treeData: any[] =[];
+  @Input() allFile: number =0;
   constructor() { }
 
   ngOnInit(): void {
     // console.log(this.treeData);
     // this.updateTree(this.treeData);
+    console.log(this.allFile);
   }
 
   toggleChildren(node: any) {
