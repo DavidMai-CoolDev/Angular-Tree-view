@@ -1,17 +1,10 @@
 <h1>Angular 2 Recursive List</h1>
-<!-- <ul>
-  <ng-template #recursiveList let-list>
-    <li *ngFor="let item of myData">
-      {{item.title}}
-      <ul *ngIf="item.children.length > 0" appDemo>
-        <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: item.children }"></ng-container>
-      </ul>
-    </li>
-  </ng-template>
-  <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: list }"></ng-container>
-</ul> -->
 
-<input type="text" #inputstring [(ngModel)]="folderName" [ngModelOptions]="{standalone: true}" (keyup)="filterdata()" placeholder="enter character">
+<!-- <input type="text" #inputstring [(ngModel)]="folderName" [ngModelOptions]="{standalone: true}" (keyup)="filterdata()" placeholder="enter character">
 <div> the all file : {{allFile}}</div>
 <app-tree-view [treeData] ="myData" [allFile] ="allFile" *ngIf="isShowTree"></app-tree-view>
-<button type="button" class="btn-primary" appDemo> Click Me !!</button>
+<button type="button" class="btn-primary" appDemo> Click Me !!</button> -->
+
+<h2>Dynamic Form</h2>
+<!-- <app-dynamic-form></app-dynamic-form> -->
+<app-pagging-example></app-pagging-example>
