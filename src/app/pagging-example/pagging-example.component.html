@@ -12,7 +12,7 @@
 		</tr>
 	  </thead>
 	  <tbody>
-		<tr *ngFor="let item of collection.data | paginate: config">
+		<tr style="display: none;" *ngFor="let item of collection.data | paginate: config">
 		  <th scope="row">{{item.id}}</th>
 		  <td>{{item.value}}</td>
 		</tr>
@@ -38,7 +38,7 @@
 	  <div class="custom-pagination">
 		<div class="pagination-first" [class.disabled]="p.isFirstPage()">
 			<span *ngIf="!p.isFirstPage()" (click)="config.currentPage = 1; test(1)">
-			  << 
+				<img class="arrow-icon" src='assets/img/anh2.png' style="width: 16px; height: 16px;">
 				</span> 
 			</div> 
 		<div class="pagination-previous" [class.disabled]="p.isFirstPage()">
