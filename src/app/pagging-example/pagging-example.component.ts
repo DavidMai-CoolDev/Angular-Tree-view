@@ -38,6 +38,10 @@ export class PaggingExampleComponent implements OnInit {
     }
   }
 
+  test2() {
+    console.log(this.config.totalItems / this.config.itemsPerPage);
+  }
+
   test(event: any) {
   console.log(event);
   }
