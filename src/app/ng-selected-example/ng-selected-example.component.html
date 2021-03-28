@@ -1,0 +1,24 @@
+<p>ng-selected-example works!</p>
+<!-- <ngx-select [items]="items" [(ngModel)]="itemId"></ngx-select> -->
+<!-- <ngx-select [items]="['111', '222']" [formControl]="selectControl"></ngx-select> -->
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Item1</th>
+        <th scope="col">Item2</th>
+        <th scope="col">Item3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of items; let i = index">
+        <td scope="row">{{i}}</td>
+        <td><ngx-select (selectionChanges)="test(i,item.value)" [items]="item.value" [formControl]="selectControl[i]"></ngx-select></td>
+        <td><input type="text" [(ngModel)]="item2[i]"/></td>
+        <td><input type="text" [(ngModel)]="item3[i]"/></td>
+      </tr>
+    </tbody>
+  </table>
+  <button (click) = "submitData()">ok</button>
+
+
